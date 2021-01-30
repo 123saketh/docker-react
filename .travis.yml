@@ -3,10 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t 123saketh/docker-react -f Dockerfile.dev .
+  - docker build -t 123saketh/docker-react -f Dockerfile .
 
 script:
-  - docker run 123saketh/docker-react npm run test -- --watchAll=false
+  - docker run 123saketh/docker-react
 
 deploy:
   provider: elasticbeanstalk
